@@ -1,6 +1,14 @@
 # Codex Meter
 
+[简体中文](README.md) | [English](README_EN.md)
+
 Windows 10/11 x64 原生 Rust 额度悬浮卡片。使用 Win32 + GDI，无 WebView、Electron、浏览器或 Node 运行时。
+
+## 使用截图
+
+![Codex Meter 在 Windows 桌面显示额度、Token 日历和重置卡详情](docs/images/codex-meter-windows.png)
+
+主窗口与重置卡详情的实际使用截图。截图中的额度、Token 和日期仅代表拍摄时的账户状态；今日 Token 的 `—` 表示服务端尚未返回对应日期的数据。
 
 ## 下载与快速安装
 
@@ -80,3 +88,7 @@ cargo build --release --locked
 内存数值以本机测量为准：程序没有常驻 WebView。收到托盘或隐藏刷新完成后，会释放可回收的驻留页面；这降低 Working Set，不代表私有提交内存也同比下降。刷新期间 Codex 子进程的开销须单独计入。当前为单账户、Windows x64 版本。
 
 `./scripts/Smoke.ps1` 验证隐藏启动、恢复、置顶、关闭到托盘、单实例和正常退出，并分别报告显示/隐藏工作集与私有内存。运行前需退出当前软件。
+
+## 致谢
+
+感谢 [Cartmancxx/codex-agent-usage-wallpaper](https://github.com/Cartmancxx/codex-agent-usage-wallpaper) 提供灵感：将剩余额度和 Token 使用情况直观地呈现在桌面上的想法，启发了本项目的桌面卡片设计与使用体验。
