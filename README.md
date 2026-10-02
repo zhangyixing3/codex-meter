@@ -12,6 +12,8 @@ Windows 10/11 x64 原生 Rust 额度悬浮卡片。使用 Win32 + GDI，无 WebV
 
 运行发行包不需要安装 Rust。更新时先从托盘菜单退出旧版，再解压新版并重新运行 `Install.cmd`。卸载前退出软件，在解压的发行包中运行 `Uninstall.cmd`；缓存默认保留。
 
+安装后也可打开 `%LOCALAPPDATA%\Programs\CodexMeter`，运行其中的 `Uninstall.cmd` 卸载。
+
 ## 常见问题
 
 - **今日 Token 显示 `—`**：服务端还没有返回与 Windows 本地今天日期匹配的统计，或当前 Codex 版本不支持该接口。`—` 表示未知，不表示使用量为零。
